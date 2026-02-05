@@ -10,13 +10,12 @@ from qiskit.quantum_info import Pauli, SparsePauliOp
 import numpy as np
 import matplotlib.pyplot as plt
 from qiskit.visualization import plot_histogram
-
 # Grover's algorithm finds a marked item in an unstructured database
 # with quadratic speedup over classical search.
 # For N items, classical needs O(N) queries, Grover needs O(sqrt(N)).
 
 # number of qubits
-n = 2
+n = int(input("how many qubits? "))
 
 # the secret state we want to find (randomly selected)
 secret = np.random.randint(0, 2**n)
@@ -89,5 +88,5 @@ for i in range(n):
     groverCircuit.measure(qr[i], cr[i])
 
 # visualize the circuit
-groverCircuit.draw(output='mpl', scale=0.25, interactive=True)
+groverCircuit.draw(output='mpl', scale=1.0, interactive=True)
 plt.show()

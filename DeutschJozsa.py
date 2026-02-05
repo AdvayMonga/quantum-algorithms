@@ -12,11 +12,11 @@ import matplotlib.pyplot as plt
 from qiskit.visualization import plot_histogram
 
 # The Deutsch-Josza algorithm is a quantum algorithm that determines
-# whether a function is "balanced" (half 0s, half 1s) or  
+# whether a function is "balanced" (half 0s, half 1s) or
 # "constant" (all same output) in just one evaluation.
 
-#number of qubits
-n = 7
+# number of qubits
+n = int(input("how many qubits? "))
 
 # constant or balanced - randomly selected
 oracleType, oracleValue = np.random.randint(2), np.random.randint(2)
@@ -68,5 +68,5 @@ for i in range(n):
   djCircuit.measure(qr[i],cr[i])
 
 # visualize the circuit
-djCircuit.draw(output='mpl',scale=.25, interactive=True)
+djCircuit.draw(output='mpl', scale=1.0, interactive=True)
 plt.show()
