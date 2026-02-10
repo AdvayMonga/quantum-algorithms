@@ -13,7 +13,7 @@ from qiskit.visualization import plot_histogram
 from qiskit_aer import AerSimulator
 
 # Bell States
-# There are 4 Bell states - maximally entangled 2-qubit states:
+# There are 4 Bell states
 # |B00⟩ = (|00⟩ + |11⟩)/√2
 # |B01⟩ = (|00⟩ - |11⟩)/√2
 # |B10⟩ = (|01⟩ + |10⟩)/√2
